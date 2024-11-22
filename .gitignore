@@ -1,0 +1,15 @@
+# Ignore Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+
+# Ignore environment folders (virtual environments)
+.env/
+.venv/
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
