@@ -7,6 +7,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Center-align wrapper and main content */
+#wrapper, #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3278,7 +3288,14 @@ input, select, textarea {
 			#wrapper > .bg {
 				background-size: auto,								auto,														auto 175%;
 			}
-
+		#wrapper,
+			#main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 0 auto;
+			}
+			
 		}
 
 /* Intro */
@@ -3755,6 +3772,18 @@ input, select, textarea {
 
 /* Main */
 
+/* Center-align posts within the main content area */
+#main .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the posts */
+    width: 100%;
+    max-width: 1200px; /* Adjust to your preferred max width */
+    margin: 0 auto;
+    padding: 0;
+    gap: 2rem; /* Adds spacing between posts */
+}
+
 	#main {
 		background-color: #ffffff;
 		position: relative;
@@ -3891,7 +3920,22 @@ input, select, textarea {
 					padding: 2.5rem;
 					width: 50%;
 				}
-
+				#main .posts {
+					justify-content: center;
+					width: 100%;
+					max-width: 1200px;
+					margin: 0 auto;
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 2rem;
+				}
+				
+				.split.contact section {
+					text-align: center;
+					max-width: 300px;
+					margin: auto;
+				}
+				
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3942,6 +3986,19 @@ input, select, textarea {
 			#main {
 				width: 100%;
 			}
+
+		/* Center the .posts section on the page */
+			#main > .posts {
+    justify-content: center;
+}
+
+		/* Make each post container narrower and center-aligned */
+			#main > .posts > * {
+				width: 80%; /* Adjust width as desired to fit posts within the center */
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 1.5rem;
+}
 
 		}
 
@@ -4687,3 +4744,16 @@ input, select, textarea {
 		}
 
 	}
+/* Portfolio Image Grid Styles */
+	.image-grid {
+   		 display: grid;
+    		grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    		gap: 10px; /* Space between images */
+   			margin-top: 20px; /* Optional: Adds space above the grid */
+}
+
+	.image-grid img {
+    	width: 100%; /* Scale images to fit grid cells */
+   		 height: auto; /* Maintain aspect ratio */
+    	border-radius: 8px; /* Optional: Adds rounded corners */
+}
